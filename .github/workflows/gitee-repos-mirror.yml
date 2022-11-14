@@ -4,6 +4,12 @@ on:
   push:
   watch:
     types: started
+  workflow_dispatch:
+    inputs:
+      root_sol:
+        description: "sync title"
+        required: true
+        default: "sync"   
   schedule:
     - cron: "0 23 * * *"
 
